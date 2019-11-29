@@ -1,0 +1,47 @@
+Hello,
+
+My idea is to create a simple n-body gravitational simulator.
+I will be undertaking this by myself.
+
+My idea is to meet the basic necessities, (geometry, lighting and texturing), then focus on rendering and computational performance.
+Do you think I should instead focus on more complex graphics features?
+Would it be possible to do an even simpler versions of the necessities and still get full marks? e.g. no specular lighting.
+
+What is your opinion on the use of the OpenGL compute shader? While it is part of the OpenGL standard, it isn't strictly graphics related.
+Would such a feature count towards the final grade?
+
+
+Ideas are listed below, roughly increasing in difficulty:
+
+Geometry
+	+ Sim bodies from arbitrary .obj model - should be simple, e.g. sphere
+	- Perhaps generate simple models for performance - point, triangle
+	+ Use tesselation shaders in increase poly count based on distance from camera
+
+Lighting
+	+ Just basic ambient, defuse, specular
+
+Texturing
+	- Apply texture to background
+	+ Each object in scene
+
+Camera
+	+ Flying camera - user controlled
+	- Similar to first person view
+
+Performance tweaking
+	+ All unnecessary features which could harm performance can be dynamically toggled, such as texturing, advanced lighting and complex models
+	+ Use instanced rendering for multiple identical bodies
+	- Possibly use geometry shader for mass drawing - Requires OpenGL 3.2
+
+Simulation
+	+ Use basic/slow - n^2 algorithm
+	+ Should implement boundaries for the bodies
+	+ Boundary shape - sphere, infinite
+	+ Dynamic simulator time step
+	+ Implement compute shader for greater performance - Requires OpenGL 4.3
+
+
+
+Thank you,
+Michael.
